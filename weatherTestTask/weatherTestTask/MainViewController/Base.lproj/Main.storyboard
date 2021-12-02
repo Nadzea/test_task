@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f5C-Ai-j0w">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="weatherTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="PAw-La-heg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBZ-Yp-Avu">
+                                <rect key="frame" x="179.5" y="425" width="55" height="46"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="30"/>
+                                <state key="normal" title="GO!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qgi-f6-tJK"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S1W-ZC-O4v">
+                                <rect key="frame" x="139.5" y="791" width="135" height="32"/>
+                                <segments>
+                                    <segment title="English"/>
+                                    <segment title="Russian"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectedLanguage:" destination="BYZ-38-t0r" eventType="valueChanged" id="lMN-rS-O4M"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PAw-La-heg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="50b-Sf-Can"/>
+                            <constraint firstItem="tBZ-Yp-Avu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BRf-1V-KC9"/>
+                            <constraint firstItem="PAw-La-heg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HoL-Mm-5KP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PAw-La-heg" secondAttribute="trailing" id="Hu3-01-aip"/>
+                            <constraint firstItem="tBZ-Yp-Avu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Y2i-LM-G0p"/>
+                            <constraint firstItem="S1W-ZC-O4v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gPC-6w-vZ8"/>
+                            <constraint firstAttribute="bottom" secondItem="PAw-La-heg" secondAttribute="bottom" id="whd-2O-b5w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S1W-ZC-O4v" secondAttribute="bottom" constant="40" id="xVD-fd-l4a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="n9R-wU-NwN"/>
+                    <connections>
+                        <outlet property="goButton" destination="tBZ-Yp-Avu" id="up2-Ke-48v"/>
+                        <outlet property="segmentedControl" destination="S1W-ZC-O4v" id="Cwa-mb-s5N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="28.794642857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FUQ-fY-AsO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f5C-Ai-j0w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="WGs-vL-GXS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PuY-xu-ycA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ci5-Re-QLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="28.794642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="284" height="177"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
