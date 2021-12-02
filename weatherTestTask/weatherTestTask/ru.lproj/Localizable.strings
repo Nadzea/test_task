@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  weatherTestTask
+
+  Created by Надежда Клименко on 27.11.21.
+  
+*/
+
+"go_button_text" = "Старт!";
+"alert_message" = "Вам нужно разрешить использовать геолокацию в настройках приложения";
+"title_alert_action" = "Настройки";
+"alert_cancel_button" = "Отмена";
+"textField_placeholder" = "Введите город";
+"backScreen_button" = "Назад";
+"URL_weatherData_with_coordinate" = "https://api.openweathermap.org/data/2.5/weather?lat=%@&lon=%@&lang=ru&appid=bb3af6a661e716dc3b3bfab4c1c87d6c";
+"URL_weatherData_by_city" = "https://api.openweathermap.org/data/2.5/weather?q=%@&lang=ru&appid=bb3af6a661e716dc3b3bfab4c1c87d6c";
+"errorLabel_text" = "Вы не ввели город";
+"feelLikeTemp_label" = "Ощущается как ";
+"north_wind" = "северный ветер ";
+"northeast_wind" = "северо-восточный ветер ";
+"east_wind" = "восточный ветер ";
+"southeast_wind" = "юго-восточный ветер ";
+"south_wind" = "южный ветер ";
+"southwest_wind" = "юго-западный ветер ";
+"west_wind" = "западный ветер ";
+"northwest_wind" = "северо-западный ветер ";
+"now_time" = "сейчас";
+"unit_of_measure" = "м/с";
+"erroLlabel_text2" = "Нет подключения к интернету";
+"warningText" = "Нет подключения к интернету. Данные получены ";
+"warningText_minute" = "минуту назад";
+"warningText_minutes" = "минут назад";
+"warningText_hour" = "час назад";
+"warningText_hours" = "часа назад";
+"warningText_day" = "день назад";
+"warningText_days" = "дней назад";
